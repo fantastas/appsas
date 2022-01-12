@@ -27,23 +27,25 @@ var kalbos_lygiai = t('kalbos_lygiai')
                 <StepsRender items={top} step ={1}/>
             </View>
           <ScrollView>
-            <View  style={[]}>
+            <View  style={[{marginTop: 30}]}>
                 {kalbaMatoma.map((item)=>(
                     <CheckModalList key={item} elements={item} lygiai={kalbos_lygiai}/>
                 ))}
             </View>
 
-            <View style={[styles.row,styles.middleContainer]}>
-
+            <View style={[styles.row,styles.middleContainer, {alignItems:"center", flex: 1, alignSelf:'baseline', justifyContent:'space-between', width:'92.5%', marginLeft: 13, marginTop:5, marginBottom:2}]}>
+                <Text style={{fontSize:16}}> {kita}</Text>
                 <Checkbox
                 key={kita}
                 key={kita}
                 position="leading"
                 label={kita}
+                color='#1C2F5D'
+                uncheckedColor='#1C2F5D'
                 status={checked ? 'checked' : 'unchecked'} 
                 onPress={() => { setChecked(!checked) }}
                 />
-                <Text> {kita}</Text>
+                
             </View>
             <View>
                  {checked == true ? (

@@ -182,7 +182,7 @@ const DB = (props) => {
             <View style={{ alignItems: 'center' }}>
                 <View style={[square]} >
                     <View style={[border, under]} ></View>
-                    <View style={[border, { backgroundColor: 'white', paddingLeft: 10, }]}>
+                    <View style={[border, { backgroundColor: 'white', padding: 12, }]}>
                         <Text style={mainText} >{pavadinimas}</Text>
                         <Text >{aprasas}</Text>
                     </View>
@@ -267,7 +267,7 @@ const DB = (props) => {
                                             setModalInner(item)
                                         }}>
                                             <View style={[border, under]} ></View>
-                                            <View style={[border, { backgroundColor: 'white', flex: 1, padding: 10 }]}>
+                                            <View style={[border, { backgroundColor: 'white',  padding: 20 }]}>
                                                 <Text style={mainText} >{item.vardas} {item.pavarde}</Text>
                                                 <Text style={imonesPavadinimas}>{item.kontaktinis_el_pastas}</Text>
                                                 <View style={[susi]}>
@@ -508,7 +508,8 @@ const square = {
     margin: 10,
     position: 'relative',
     backgroundColor: 'white',
-    paddingBottom: 1,
+    paddingBottom: 1   ,
+    position:'relative'
 }
 const under = {
     backgroundColor: '#a6a7ab8c',

@@ -37,7 +37,7 @@ const Atlyginimas = ({ navigation }) => {
                 <View style={styles.topText}>
                     <StepsRender items={top} step={1} />
                 </View>
-                <View style={[styles.flex, { marginTop: 20 }]}>
+                <View style={[styles.flex, { marginTop: 50 }]}>
                     <TextInput
                         value={nuo}
                         onChangeText={setNuo}

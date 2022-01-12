@@ -30,7 +30,7 @@ const SkelbimoI = ({ route,navigation }) => {
         <Text style={[{ fontWeight: 'bold', fontSize: 20 }]}>{t('skelbimo_informacija')}</Text>
         <Text style={[{ fontWeight: 'bold', fontSize: 20 }]}>{items.skelbimas}</Text>
       </View>
- <ScrollView>
+ <ScrollView style={{marginBottom:50}}>
       <ModalUpdateSingle changer={setSkelbimas} naudotojas={naudotojas} update={'darbo_sritis'} name={t('darbuotojo_options_top')[2]} current={items.darbo_sritis} item={t('darbo_sritis')} />
       <ModalUpdateText changer={setSkelbimas} naudotojas={naudotojas} update={'pareigos'} name={t('darbdavio_top_Pozicija')[0]} current={items.pareigos} item={items.pareigos} />
       <ModalUpdateSingle changer={setSkelbimas} naudotojas={naudotojas} update={'darbo_pozicija'} name={t('darbdavio_top_Pozicija')[1]} current={items.darbo_pozicija} item={t('darbo_pozicijos')} />

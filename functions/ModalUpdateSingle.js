@@ -45,27 +45,30 @@ const ModalUpdateSingle = (props) => {
 
       }}
       >
-        <Text style={[styles.innerSelectText, { marginLeft: -5 }]}>{props.name}</Text>
-        <Text style={{ position: "absolute", bottom: 0, left: 10, color: 'grey' }}>{props.current}</Text>
-        <Icon style={{ fontSize: 20, top: 5 }} name="right" />
+        <Text style={[styles.innerSelectText, { marginLeft: 5 }]}>{props.name}</Text>
+        <Text style={{ position: "absolute", bottom: 1, left: 15, color: 'grey' }}>{props.current}</Text>
+        <Icon style={{ fontSize: 20, top: 5, color: "#1C2F5D" }} name="right" />
       </TouchableOpacity>
       <Modal isVisible={isModalVisible}
         animationInTiming={200}
         animationIn="slideInRight"
         animationOut="slideOutRight">
-        <View style={{ flex: 1, backgroundColor: "white" }}>
+        <View style={{ flex: 1, backgroundColor: "white", borderTopLeftRadius:8, borderTopRightRadius:8 }}>
           <View style={styles.centerContainer}>
-            <ScrollView>
+            <ScrollView style={{marginTop:50}}>
+              
               <RadioButton.Group onValueChange={newValue => {
                 update(props.update, value, props.naudotojas, props.changer, newValue)
                   ;
               }} value={value}>
                 {modalData.map((s) => (
                   <View style={[styles.row, { height: 50, alignContent: 'center', width: '100%', borderBottomColor: 'grey', borderBottomWidth: 1 }]} key={s} >
+                    
                     <RadioButton.Item
-                      style={{ width: 300 }}
+                      style={{ width: 300}}
                       value={s}
                       mode='ios'
+                      color='#1C2F5D'
                       label={s}
                       position='trailing'
                     />
@@ -79,6 +82,7 @@ const ModalUpdateSingle = (props) => {
                     style={{ width: 300 }}
                     label={t('visi_miestai')}
                     mode='ios'
+                    color='#1C2F5D'
                     value={''}
                     position='trailing'
                   />
@@ -100,7 +104,7 @@ const ModalUpdateSingle = (props) => {
             </ScrollView>
           </View>
         </View>
-        <View style={{ backgroundColor: "white" }}>
+        <View style={{ backgroundColor: "white" , borderBottomLeftRadius: 8, borderBottomRightRadius: 8}}>
           <Button style={styles.btn} onPress={() => {
             toggleModal()
             setVidinis(!vidinis)

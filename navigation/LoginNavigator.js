@@ -62,19 +62,17 @@ const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
 const TopTab = createMaterialTopTabNavigator(); 
 const LoginStack = () => {
-  const { tasks, setTasks, access } = useContext(TaskContext);
+  const { tasks, setTasks } = useContext(TaskContext);
   
   try{
     if (tasks != "logout"){
     Login().then(data => {
       setTasks(data)
-      
     })
   }
   useEffect(() => {
     // console.log('Login Navigator', tasks)
   }, [tasks])
-  
   }
   catch(e){console.log(e)}
 

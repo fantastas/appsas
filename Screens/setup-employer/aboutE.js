@@ -93,7 +93,7 @@ const AboutE = ({ navigation }) => {
       <ScrollView style={{ backgroundColor: 'white' }} >
         <View style={styles.textleft}>
           <Text style={[styles.textCM, { fontSize: 28, fontWeight: 'bold' }]}>Apie Imone</Text>
-          <Text style={{ color: 'grey', }}>{t('uzpildyti_apie_imone')}</Text>
+          <Text style={{ color: 'grey', marginTop:10 }}>{t('uzpildyti_apie_imone')}</Text>
         </View>
 
 

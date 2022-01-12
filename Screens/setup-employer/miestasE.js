@@ -54,7 +54,7 @@ AsyncStorage.getItem('miestas').then(data=>{
           
             <View>
             <TextInput
-            style={styles.background}
+            style={[styles.background,{marginTop:30}]}
                  placeholder={t('Filtras')}
                 value={filteris}
              onChangeText={setFilteris}
@@ -70,6 +70,7 @@ AsyncStorage.getItem('miestas').then(data=>{
                         style={{width:'80%'}}
                     value={s}
                     mode='ios'
+                    color='#1C2F5D'
                     label={s}
                     position='trailing'
                     />
@@ -81,6 +82,7 @@ AsyncStorage.getItem('miestas').then(data=>{
                         style={{width:'80%'}}
                     value={''}
                     mode='ios'
+                    color='#1C2F5D'
                     label={t('visi_miestai')}
                     position='trailing'
                     />
@@ -91,6 +93,7 @@ AsyncStorage.getItem('miestas').then(data=>{
                         style={{width:'80%'}}
                     value={'#'}
                     mode='ios'
+                    color='#1C2F5D'
                     label={t('nuotoliniu')}
                     position='trailing'
                     />

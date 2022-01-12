@@ -25,6 +25,7 @@ const top = t('darbuotojo_top_Aprasymas')
 
 
     return(
+
         <View style={[styles.container,{backgroundColor:'white'}]}>
         <View style={[styles.row,{justifyContent:'space-between',paddingTop:15,paddingBottom:30}]}>
         <Text style={[styles.textCM,{fontSize:18}]} onPress={()=>{navigation.pop()}}>{t('atgal')}</Text>
@@ -35,6 +36,7 @@ const top = t('darbuotojo_top_Aprasymas')
                 <StepsRender items={top} step ={1} />
             </View>
             <View style={{flex:1, paddingLeft:15, paddingRight:15,paddingTop:50}}>
+                <Text style={{fontSize:16, color:'#1C2F5D', fontWeight:'700'}}>{t("darbuotojo_aprasymas")}</Text>
                     <TextInput 
                     value={pareigos}
                     onChangeText={(value)=>{

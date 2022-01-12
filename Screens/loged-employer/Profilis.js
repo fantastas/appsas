@@ -81,7 +81,7 @@ console.log(naudotojas)
         }
     };
     return (
-        <View style={{ flex: 1 }} >
+        <View style={{ flex: 1, backgroundColor: 'white' }} >
             <View style={{ paddingTop: 20 }}>
                 <View style={[{ justifyContent: 'space-between', paddingBottom: 30 }]}>
                     <Text style={[{ textAlign: 'center', color: 'black', fontSize: 20, fontWeight: 'bold' }]}>{t('Profilis')}</Text>
@@ -93,34 +93,34 @@ console.log(naudotojas)
             <View style={{ flex: 1, borderTopColor: 'grey', borderTopWidth: 1 }}>
                 <TouchableOpacity style={styles.innerSelect} onPress={() => { navigation.navigate('asmenine') }} >
                     <Text style={styles.innerSelectText}>{t('asmenine_informacija')}</Text>
-                    <Icon style={{ fontSize: 20 }} name="right" />
+                    <Icon style={{ fontSize: 20, color: '#1C2F5D' }} name="right" />
                 </TouchableOpacity>
                
                 <TouchableOpacity style={styles.innerSelect} onPress={() => { navigation.navigate('slaptazodzio') }}>
                     <Text style={styles.innerSelectText}>{t('slaptazodzio_keitimas')}</Text>
-                    <Icon style={{ fontSize: 20 }} name="right" />
+                    <Icon style={{ fontSize: 20, color: '#1C2F5D' }} name="right" />
                 </TouchableOpacity>
                 <TouchableOpacity onPress={() => { navigation.navigate('kalbai') }} style={styles.innerSelect} >
                     <Text style={styles.innerSelectText}>{t('pasirinkti kalba')}</Text>
-                    <Icon style={{ fontSize: 20 }} name="right" />
+                    <Icon style={{ fontSize: 20, color: '#1C2F5D' }} name="right" />
                 </TouchableOpacity>
                 <TouchableOpacity onPress={() => { onToggleSwitch() }} style={styles.innerSelect} >
                     <Text style={styles.innerSelectText}>{t('pranesimai')}</Text>
-                    <Switch mode="IOS" value={isSwitchOn} onValueChange={onToggleSwitch} />
+                    <Switch color= '#1C2F5D' ode="IOS" value={isSwitchOn} onValueChange={onToggleSwitch} />
                 </TouchableOpacity>
             </View>
 
 
             <View style={{ justifyContent: 'flex-end', alignItems: 'flex-end' }}>
                 <View>
-                    <Text style={styles.innerSelectText} onPress={() => {
+                    <Text style={styles.LogOut} onPress={() => {
                         setVisible(!visible)
                         setDialog('atsijungti')
                     }}> {t('atsijungti')} <Icon name="deleteuser" size={30} />
                     </Text>
                 </View>
                 <View style={{ marginBottom: 50 }}>
-                    <Text style={styles.innerSelectText} onPress={() => {
+                    <Text style={styles.LogOut1} onPress={() => {
                         setVisible(!visible)
                         setDialog('istrinti')
 

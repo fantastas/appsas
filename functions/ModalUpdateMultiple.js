@@ -57,13 +57,13 @@ const ModalUpdateMultiple = (props) => {
       >
         <Text style={styles.innerSelectText}>{props.name}</Text>
         {/* <Text style={{position:"absolute",bottom:0,left:10,color:'grey'}}>{props.current}</Text> */}
-        <Icon style={{ fontSize: 20, top: 5 }} name="right" />
+        <Icon style={{ fontSize: 20, top: 5, color: "#1C2F5D" }} name="right" />
       </TouchableOpacity>
       <Modal isVisible={isModalVisible}
         animationInTiming={200}
         animationIn="slideInRight"
         animationOut="slideOutRight">
-        <View style={{ flex: 1, backgroundColor: "white" }}>
+        <View style={{ flex: 1, backgroundColor: "white", borderTopLeftRadius:8, borderTopRightRadius:8 }}>
           <Text style={[styles.label]}>{props.elements}</Text>
           <View style={[styles.centerContainer, { marginBottom: 20, marginTop: 20 }]}>
             <ScrollView>
@@ -89,7 +89,7 @@ const ModalUpdateMultiple = (props) => {
             </ScrollView>
           </View>
         </View>
-        <View style={{ backgroundColor: "white" }}>
+        <View style={{ backgroundColor: "white", borderBottomLeftRadius: 8, borderBottomRightRadius: 8 }}>
           <Button style={styles.btn} onPress={() => {
             toggleModal()
             setVidinis(!vidinis)

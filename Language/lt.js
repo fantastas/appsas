@@ -17,6 +17,7 @@ export const lt = {
       atgal:"<  Atgal",
       praleisti:"Praleisti ",
       Prie_Scovo:"Prisijunkite prie Scobo",
+      Prie_Scovo_R:"Registruokitės prie Scobo",
       prisijungimas:"Prisijungimas",
       registracija:"Registracija",
       slaptazodis:"Įrašykite slaptažodį",
@@ -106,6 +107,9 @@ export const lt = {
       ar_tikrai_istrinti:'Ar tikrai norite ištrinti?',
       uzdaryti:'uždaryti',
       sutinku_prisijunimo:'Sutinku su prisijungimo taisyklėmis',
+      darbuotojo_aprasymas:'Trumpai parašykite apie save',
+      klausimai_kandidatam:'Galite užduoti klausimų kandidatams, jų atsakymus gausite su kandidatų anketomis.',
+      Filtras: 'Ieškoti',
       languages:[
         "en",
       "lt",

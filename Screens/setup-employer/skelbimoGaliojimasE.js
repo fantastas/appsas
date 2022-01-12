@@ -4,13 +4,15 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import { useTranslation, Trans } from "react-i18next";
 import { TaskContext } from '../../AppState/AppContextState';
 import { Button, TextInput, Text, List } from 'react-native-paper';
-import styles from "./styles";
 import { GetData } from '../../functions/GetData'
 
 import DateTimePicker from '@react-native-community/datetimepicker';
 import StepsRender from "../../functions/steps";
 import { storeData } from "../../functions/StoreData";
 import Login from "../../functions/Log-in";
+import Icon from 'react-native-vector-icons/dist/FontAwesome';
+import styles from "../MainCss";
+
 
 const SkelbimoGaliojimasE = ({ navigation }) => {
   const { user, setTasks } = useContext(TaskContext);
@@ -91,15 +93,14 @@ const SkelbimoGaliojimasE = ({ navigation }) => {
   };
   console.log(JSON.parse(requestOptions.body), naudotojas)
   const create = async () => {
-    console.log(naudotojas)
     const create_listing = 'http://job-nestjs.herokuapp.com/skelbimai/' + naudotojas._id;
     try {
       console.log('priespaskutinis', requestOptions)
       const response = await fetch(create_listing, requestOptions)
-      // console.log(response)
+      console.log(response)
       const json = await response.json().then(data => {
-        console.log('??',response)
-        if (response.status == 200) {
+        console.log(data)
+        if (data.statusCode != 500) {
           isRegistered()
         }
         return
@@ -120,10 +121,8 @@ const SkelbimoGaliojimasE = ({ navigation }) => {
   }
   const isRegistered = async () => {
     try {
-      console.log('af',updateUserdata)
       const response = await fetch(updateUser, updateUserdata)
       const json = await response.json().then(data => {
-        console.log(data)
         setTasks(Login())
       })
     } catch (error) {
@@ -149,7 +148,10 @@ const SkelbimoGaliojimasE = ({ navigation }) => {
             // onChangeText={setDate}
             multiline={false}
           />
-          <Button style={styles.rightButton} onPress={() => { showDatepicker() }} >icona</Button>
+          <Button style={[styles.rightButton, { width: '100%', height: '100%', top: 0, alignItems:'flex-end', justifyContent:'center' }]} onPress={() => { showDatepicker() }} >
+          <Text style={{ width: '100%' }}> <Icon style={styles.textCM} name="calendar" /></Text>
+            </Button>
+          
         </View>
         {show && (
           <DateTimePicker

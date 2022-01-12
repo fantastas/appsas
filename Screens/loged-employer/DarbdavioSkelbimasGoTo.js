@@ -24,7 +24,7 @@ setSkelbimas(JSON.stringify(s))
   return (
     <TouchableOpacity key ={s._id} onPress={() => { props.navigation.navigate('skelbimo',{s }) }} style={[styles.innerSelect, { paddingBottom: 20 }]} >
     <Text style={styles.innerSelectText}>{s.pareigos}</Text>
-    <Switch style={{ marginBottom: -15 }} value={isSwitchOn} onValueChange={onToggleSwitch} />
+    <Switch color="#1C2F5D" style={{ marginBottom: -15 }} value={isSwitchOn} onValueChange={onToggleSwitch} />
     <Text style={{ position: 'absolute', bottom: 0, left: 10, color: 'grey' }}>{s.galiojimo_laikas}</Text>
 </TouchableOpacity>
   );

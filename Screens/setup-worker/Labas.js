@@ -34,7 +34,7 @@ const user = GetUser()
             <View style={[styles.middleContainer,{paddingTop:40}]}><Logo height={180} width={180}/></View>
         <View style={[styles.centerContainer,{alignSelf:'flex-start',alignItems:'flex-start'}]}> 
                 <Text style={{color:'white',fontSize:28,textAlign:'left'}}>{t('Labas')} </Text>
-                <Text style={{color:'white',fontSize:16,width:150}} >{t('Laukiame')}</Text>
+                <Text style={{color:'white',fontSize:17,width:150, marginTop:10}} >{t('Laukiame')}</Text>
             </View>
             <View style={{flex:1,justifyContent:'flex-end'}}>
                 <Button mode="contained" uppercase={false} style={[styles.btn,styles.background,{marginBottom:1,width:'100%',height:52,paddingBottom:0}]}  onPress={()=>{GoTo()}}>

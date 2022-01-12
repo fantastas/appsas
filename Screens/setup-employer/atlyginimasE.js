@@ -27,7 +27,7 @@ const top = t('darbdavio_top_Atlyginimas')
                 <View style={styles.topText}>
                     <StepsRender items={top} step={1} />
                 </View>
-                <View style={[styles.flex, { marginTop: 20 }]}>
+                <View style={[styles.flex, { marginTop: 30 }]}>
                     <TextInput
                         value={nuo}
                         onChangeText={setNuo}

@@ -146,7 +146,7 @@ const CardData = (props) => {
                         animationInTiming={200}
                         animationIn="slideInRight"
                         animationOut="slideOutRight">
-                        <View style={{ flex: 1, backgroundColor: "white", position: 'relative' }}>
+                        <View style={{ flex: 1, backgroundColor: "white", position: 'relative'}}>
                             <TouchableOpacity style={topClose} onPress={(() => {
                                 setModalVisible(false)
                             })}><Icon style={iconStyleTopClose} name="close" /></TouchableOpacity>

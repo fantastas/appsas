@@ -26,7 +26,7 @@ useEffect(() => {
             <View style={styles.topText}>
                 <StepsRender items={top} step ={1}/>
             </View>
-            <View style={[styles.background,styles.flex,styles.middleContainer]}>
+            <View style={[styles.background,styles.flex,styles.middleContainer, {marginTop:30}]}>
                 {t('etatas').map((item)=>(
                     <CheckBoxList key={item} elements={item}/>
                 ))}
