@@ -30,7 +30,7 @@ const Start = ({ navigation }) => {
         </View>
       </View>
       <View >
-        <Button  mode="none" style={[styles.btn, styles.background]} uppercase={false} onPress={() => { navigation.navigate("ChooseType") }}> <Text style={[styles.textCM]}>{t('toliau')} </Text></Button>
+        <Button  mode="contained" style={[styles.btn, styles.background]} uppercase={false} onPress={() => { navigation.navigate("ChooseType") }}> <Text style={[styles.textCM]}>{t('toliau')} </Text></Button>
       </View>
     </View>
   )

@@ -23,7 +23,7 @@ const SlaptazodzioK = ({ navigation }) => {
         <Text style={[styles.textCM, { fontSize: 18, position: "absolute", left: 10, top: 2 }]} onPress={() => { navigation.pop() }}>{t('atgal')}</Text>
         <Text style={[{ fontWeight: 'bold', fontSize: 20 }]}>{t('slaptazodzio_keitimas')}</Text>
       </View>
-      <ScrollView >
+      <ScrollView style={{marginBottom:50}}>
         <TextInput
           style={[styles.inputTextsPersonal, { position: 'relative' }]}
           activeOutlineColor="black"
@@ -57,15 +57,16 @@ const SlaptazodzioK = ({ navigation }) => {
           onChangeText={setPakartoti}
           multiline={false}
         />
+        </ScrollView>
         <View style={{ justifyContent: 'flex-end', flex: 1 }}>
           <Button
-            style={[styles.btn, styles.backgroundBlue, { marginBottom: 50, width: '95%', height: 55 }]}
+            style={[styles.btn, styles.backgroundBlue, {  marginBottom: 50, width: '95%', height: 55 }]}
             contentStyle={{ color: 'white' }}
             mode="contained"
             onPress={() => { update() }}
             uppercase={false} >{t('issaugoti')}</Button>
         </View>
-      </ScrollView>
+      
     </View>
   );
 }

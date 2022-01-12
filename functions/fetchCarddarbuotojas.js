@@ -70,15 +70,18 @@ const CardData = (props) => {
     }
     const agree = () => {
         sumatchintWorker(skelbimoId, data[0]._id)
+        console.log(data[0].id)
         data.shift()
         setCount(count + 1)
         setData(data)
+        console.log(count)
     }
     const no = () => {
         atmestiSkelbimaWorker(skelbimoId, data[0]._id)
         data.shift();
         setData(data)
         setCount(count + 1)
+        console.log(count)
     }
             const Langelis = (pavadinimas, aprasas) => {
                 return (
@@ -228,7 +231,6 @@ const sumatchintWorker = (darbuotojoSkelbimoID,darbdavioSkelbimoID) => {
         }
         try {
             const response = await fetch(atmesti_listing, atmesti_skelbimai)
-            console.log(response)
             const json = await response.json().then(data => {
                 console.log('response pridejimo', data)
 

@@ -35,7 +35,15 @@ const middle = t('patirtis_metais')
             <StepsRender items={top} step ={1} />
         </View>
     <View>
-        <Text>{t('ar_turite_patirties')}</Text>
+        <Text         style={[
+          styles.paragraph,
+          {
+            color: 'black',
+            fontWeight: '700',
+            fontSize: 16
+          }
+        ]}>
+        {t('ar_turite_patirties')}</Text>
         <Checkbox.Item key={t('taip')}
             position="leading"
             style={{  
@@ -43,6 +51,8 @@ const middle = t('patirtis_metais')
             }}
             labelStyle={{textAlign:'left',textTransform:'capitalize'}}
             label={t('taip')}
+            color='#1C2F5D'
+            uncheckedColor='#1C2F5D'
             status={!checked ?  'unchecked' :'checked'} 
             onPress={() => {
                 setChecked(true)
@@ -54,6 +64,8 @@ const middle = t('patirtis_metais')
             }}
             labelStyle={{textAlign:'left',textTransform:'capitalize'}}
             label={t('ne')}
+            color='#1C2F5D'
+            uncheckedColor='#1C2F5D'
             status={checked ?  'unchecked' :'checked'} 
             onPress={() => {
                 setChecked(false)
@@ -61,7 +73,14 @@ const middle = t('patirtis_metais')
     </View>
         { checked ==true ? (
             <View>
-                <Text>{t('kiek_metu')}</Text>
+                <Text style={[
+          styles.paragraph,
+          {
+            color: 'black',
+            fontWeight: '700',
+            fontSize: 16
+          }
+        ]}>{t('kiek_metu')}</Text>
             <View style={styles.list}>
             <Picker  saveTo="@patirtis" data={middle} font={16}/> 
             </View>

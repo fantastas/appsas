@@ -106,7 +106,7 @@ const SutapeW = () => {
             {skelbimai[0] != undefined ? (
                 <View style={{ position: 'relative' }}>
 
-                    {skelbimai[0].map((item) => (
+                    {skelbimai.map((item) => (
                         <View style={{ marginTop: 20, alignItems: 'center' }}>
                            <TouchableOpacity onPress={() => {
                                 setModalVisible2(!isModalVisible2)

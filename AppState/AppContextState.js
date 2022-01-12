@@ -9,7 +9,7 @@ const TaskContextProvider = (props) => {
     const [main, setMain] = useState('kortele');
     const [user, setUser] = useState('');
     const [skelbimas, setSkelbimas] = useState('');
-    const [access, setAccess] = useState('');
+    const [access, setAccess] = useState('0');
     const [multi, setMulti] = useState([]);
     const [baze, setBaze] = useState('baze');
     const [disabled, setDisabled] = useState(true);

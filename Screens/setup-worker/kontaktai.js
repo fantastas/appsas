@@ -121,8 +121,8 @@ const Kontaktai = ({ navigation }) => {
             const response = await fetch(create_listing, requestOptions)
             console.log(response)
             const json = await response.json().then(data => {
-                console.log(data)
-                if (response.status == 200) {
+                if (data.responseCode !== 500) {
+                    console.log(data)
                     isRegistered()
                 }
             })
@@ -132,7 +132,7 @@ const Kontaktai = ({ navigation }) => {
     };
 
 
-    const updateUser = 'http://job-nestjs.herokuapp.com/users/update/' + naudotojas.access_token
+    const updateUser = 'http://job-nestjs.herokuapp.com/users/update/' + access_token
     const updateUserdata = {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -145,11 +145,9 @@ const Kontaktai = ({ navigation }) => {
         try {
             const response = await fetch(updateUser, updateUserdata)
             const json = await response.json().then(data => {
-                console.log(response)
-                if(response.status == 200 || response.status == 201){
-                    console.log('adad',data)
+                console.log(data)
                 setTasks('login')
-                setMain('kortele')}
+                setMain('kortele')
             })
         } catch (error) {
             console.error(error);
@@ -165,7 +163,7 @@ const Kontaktai = ({ navigation }) => {
                     <StepsRender items={top} step={2} noEnd={true} />
                 </View>
 
-                <View >
+                <View style={{marginTop: 40}}>
                     <TextInput
                         placeholder={t('kontaktinis_el')}
                         onChangeText={setOption}
@@ -193,18 +191,20 @@ const Kontaktai = ({ navigation }) => {
                         borderWidth={1}
                         borderRadius={8}
                         activeOutlineColor="white"
+                        style={{marginTop:5}}
                     />
 
                 </View>
-                <View style={{ marginTop: 25 }}>
+                <View style={{ marginTop: 30}}>
                     <Checkbox.Item key={t('kotaktu_sutikimas')}
                         position="leading"
                         style={{
-                            borderBottomColor: 'grey',
+                            borderBottomColor: 'white',
                             borderBottomWidth: 1,
+                            marginLeft: -20
                             // marginBottom: 30,
                         }}
-                        labelStyle={{ textAlign: 'left', textTransform: 'capitalize' }}
+                        labelStyle={{ textAlign: 'left', textTransform: 'none' }}
                         label={t('kotaktu_sutikimas')}
                         status={checked ? 'checked' : 'unchecked'}
 
@@ -215,11 +215,12 @@ const Kontaktai = ({ navigation }) => {
                     <Checkbox.Item key={t('darbuotoju_baze_sutikimas')}
                         position="leading"
                         style={{
-                            borderBottomColor: 'grey',
+                            borderBottomColor: 'white',
                             borderBottomWidth: 1,
+                            marginLeft: -20
                             // marginBottom: 30,
                         }}
-                        labelStyle={{ textAlign: 'left', textTransform: 'capitalize' }}
+                        labelStyle={{ textAlign: 'left', textTransform: 'none' }}
                         label={t('darbuotoju_baze_sutikimas')}
                         status={checked2 ? 'checked' : 'unchecked'}
                         onPress={() => {

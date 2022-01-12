@@ -37,7 +37,7 @@ useEffect(() => {
             </View>
             <View style={styles.container}>
             <TextInput 
-                style={[styles.inputTexts, { position: 'relative' }]}
+                style={[styles.inputTexts, { position: 'relative', marginTop: 30}]}
                 activeOutlineColor="black"
                 activeUnderlineColor='white'
                 selectionColor="#1C2F5D"

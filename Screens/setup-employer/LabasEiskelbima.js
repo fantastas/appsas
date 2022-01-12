@@ -27,7 +27,7 @@ const LabasEiskelbima = ({ navigation }) => {
             </View >
             <View style={[styles.centerContainer, { alignSelf: 'flex-start', alignItems: 'flex-start' }]} >
                 <Text style={{ color: 'white', fontSize: 28, textAlign: 'left', width: 200 }}>{t('pridekite_darbo_pasiulyma')} </Text>
-                <Text style={{ color: 'white', fontSize: 16, width: 200 }} >{t('pradekite_naudotis')}</Text>
+                <Text style={{ color: 'white', fontSize: 17, width: 200, marginTop:10 }} >{t('pradekite_naudotis')}</Text>
             </View>
             <View style={{ flex: 1, justifyContent: 'flex-end' }}>
                 <Button mode="contained" uppercase={false} style={[styles.btn, styles.background, { marginBottom: 1, width: '100%', height: 52, paddingBottom: 0 }]} onPress={() => { GoTo() }}>

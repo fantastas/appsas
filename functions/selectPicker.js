@@ -6,6 +6,7 @@ import {storeData} from "./StoreData";
 import DynamicallySelectedPicker from 'react-native-dynamically-selected-picker';
 import styles from './functionStyles';
 import { TaskContext } from '../AppState/AppContextState';
+import Background from '../assets/background';
 
 const Picker = (props)=>{
  
@@ -15,8 +16,8 @@ const [option,setOption]=useState('')
 const {disabled,setDisabled}= useContext(TaskContext)
 
 const theJson = []
-const windowWidth = Dimensions.get('window').width*0.7;
-theJson.push(props.data.map((s,index) => ({value:s,label:s})))
+const windowWidth = Dimensions.get('window').width*0.8;
+theJson.push(props.data.map((s,index) => ({value:s,label:s,flex: 1,justifyContent: 'center',alignContent: 'center'})))
 var font = 20;
 const name = props.saveTo.replace(/\s/g, '')
   const saveData = (item)=>{
@@ -34,6 +35,11 @@ const name = props.saveTo.replace(/\s/g, '')
           onScroll={({index, item}) => { saveData(item)}}
           width={windowWidth}
           height={300}
+          style = {{textAlign: 'center',
+          margin: 0,
+          fontSize: 22,
+          fontWeight: "100"}}
+          
           initialSelectedIndex={2}
           allItemsColor="#000000"
           topGradientColors={["#FFFFFF","#FFFFFF90"]}

@@ -54,16 +54,22 @@ const CheckBoxList = (props) => {
     useEffect(() => { 
 
       }, [multi])
+      var stilius ={}
+      if(props.nogrey==true){
+          stilius = { borderBottomColor: 'white', marginLeft: -20}
+      }
     return (
         <Checkbox.Item key={items}
             position="leading"
-            style={{
+            style={[{
                 borderBottomColor: 'grey',
                 borderBottomWidth: 1,
                 // marginBottom: 30,
-            }}
-            labelStyle={{ textAlign: 'left', textTransform: 'capitalize' }}
+            },stilius]}
+            labelStyle={{ textAlign: 'left', textTransform: 'none' }}
             label={items}
+            color='#1C2F5D'
+            uncheckedColor='#1C2F5D'
             status={checked ? 'unchecked' : 'checked'}
             onPress={(items) => {
                 setChecked(!checked)

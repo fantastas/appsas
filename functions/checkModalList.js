@@ -30,6 +30,8 @@ function CheckModalList(props) {
       <Checkbox.Item key={props.elements}
         position="trailing"
         label={props.elements}
+        color='#1C2F5D'
+        uncheckedColor='#1C2F5D'
         status={vidinis ? 'checked' : 'unchecked'}
         onPress={() => {
           if (vidinis !== true) { toggleModal(); }
@@ -50,6 +52,8 @@ function CheckModalList(props) {
                 position="trailing"
                 label={item}
                 icon={false}
+                color='#1C2F5D'
+                uncheckedColor='#1C2F5D'
                 status={checked ? 'checked' : 'unchecked'}
                 onPress={() => {
                   setData(item)

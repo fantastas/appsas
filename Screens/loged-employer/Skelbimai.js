@@ -48,7 +48,7 @@ const Skelbimai = (props, { navigation }) => {
       }, [skelbimas])
     const onToggleSwitch = () => setIsSwitchOn(!isSwitchOn);
     return (
-        <View style={{ flex: 1 }} >
+        <View style={{ flex: 1, backgroundColor: 'white' }} >
                     <ScrollView>
             <View style={{ paddingTop: 20 }}>
                 <View style={[{ justifyContent: 'space-between', paddingBottom: 30 }]}>

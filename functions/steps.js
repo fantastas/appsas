@@ -24,7 +24,7 @@ const StepsRender = (props) => {
     stepIndicatorFinishedColor: '#8A8A8E',
     stepIndicatorUnFinishedColor: '#8A8A8E',
     stepIndicatorCurrentColor: '#1C2F5D',
-    stepIndicatorLabelFontSize: 13,
+    stepIndicatorLabelFontSize: 11,
     currentStepIndicatorLabelFontSize: 13,
     stepIndicatorLabelCurrentColor: '#1C2F5D',
     stepIndicatorLabelFinishedColor: '#8A8A8E',
@@ -40,8 +40,8 @@ const StepsRender = (props) => {
 console.log(step)
 const style1 = {backgroundColor:'#1C2F5D', width:30,height:30, borderRadius:20, borderColor:'white',borderWidth:5}
 const style2 = {backgroundColor:configs.separatorFinishedColor, width:30,height:30, borderRadius:20, borderColor:'white',borderWidth:5}
-const text1 =  {justifyContent:'center',color:'#1C2F5D', fontSize:18}
-const text2 =  {justifyContent:'center',color:'#1C2F5D', fontSize:18}
+const text1 =  {justifyContent:'center',color:'#1C2F5D', fontSize:16}
+const text2 =  {justifyContent:'center',color:'#1C2F5D', fontSize:16}
   return (
     <View style={[{width:'100%',justifyContent:'space-evenly',position:'relative'},styles.row]}>
       {/* {props.noStart == true ? (<View></View>) : (<View style={{ position: 'absolute', borderColor: '#8A8A8E', borderWidth: 1, width: '30%', left: 0, top: 11 }}></View>)} */}

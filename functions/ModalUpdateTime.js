@@ -78,7 +78,7 @@ const ModalUpdateTime = (props) => {
   }
 
   return (
-    <View >
+    <View>
       <TouchableOpacity style={[styles.innerSelect, { paddingBottom: 18 }]} onPress={() => {
         if (vidinis !== true) { toggleModal(); }
         else { clearSelect() }
@@ -87,7 +87,7 @@ const ModalUpdateTime = (props) => {
       }}
       >
         <Text style={styles.innerSelectText}>{props.name}</Text>
-        <Text style={{ position: "absolute", bottom: 0, left: 10, color: 'grey' }}>{props.current}</Text>
+        <Text style={{ position: "absolute", bottom: 0, left: 15, color: 'grey' }}>{props.current}</Text>
 
         <Icon style={{ fontSize: 20, top: 5 }} name="right" />
       </TouchableOpacity>
@@ -95,10 +95,10 @@ const ModalUpdateTime = (props) => {
         animationInTiming={200}
         animationIn="slideInRight"
         animationOut="slideOutRight">
-        <View style={{ flex: 1, backgroundColor: "white" }}>
-          <View>
+        <View style={{ height: 200, backgroundColor: "white", borderTopLeftRadius: 8, borderTopRightRadius: 8}}>
+          <View style= {{width: '80%', alignSelf:'center', marginTop: 50}}>
             <TextInput
-              style={[styles.inputTexts, { position: 'relative' }]}
+              style={[styles.inputTexts, { position: 'relative'}]}
               activeOutlineColor="black"
               activeUnderlineColor='white'
               selectionColor="#1C2F5D"
@@ -127,7 +127,7 @@ const ModalUpdateTime = (props) => {
             />
           )}
         </View>
-        <View style={{ backgroundColor: "white" }}>
+        <View style={{ backgroundColor: "white", borderBottomLeftRadius:8, borderBottomLeftRadius:8 }}>
           <Button style={styles.btn} onPress={() => {
             toggleModal()
             setVidinis(!vidinis)

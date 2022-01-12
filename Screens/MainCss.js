@@ -20,7 +20,7 @@ const styles = StyleSheet.create({
   }
   ,
   middleContainer:{
-    alignSelf:'center',
+    alignSelf:'center'
 
   },
     row:{
@@ -56,9 +56,10 @@ const styles = StyleSheet.create({
   text:{
     // alignSelf:'center',
     fontSize:26,
+    
   },
   topText:{
-    marginTop:30,
+    marginTop:0,
     fontSize:26,
   }
   ,
@@ -136,12 +137,21 @@ const styles = StyleSheet.create({
     color:"#1C2F5D",
     fontSize:17,
   },
+  textCM1:{
+    color:"#1C2F5D",
+    fontSize:17,
+    fontWeight:'900',
+  },
   textButton:{
     fontWeight:'bold'
   },
   textWhite:{
       color:'white'
   },
+  textWhite1:{
+    color:'white',
+    fontWeight: '700'
+},
   relative:{
       position:'relative'
   },
@@ -199,11 +209,27 @@ const styles = StyleSheet.create({
     borderBottomWidth:1,
     borderBottomColor:'grey',
     padding:9,
+    marginRight: 10,
+    marginLeft: 10,
     alignItems:'center',
+    
    
   },
+
   innerSelectText:{
-    fontSize:18
+    fontSize:18,
+    marginLeft: 5
+  },
+  LogOut:{
+    fontSize:18,
+    marginLeft:-130,
+    
+  },
+  LogOut1:{
+    fontSize:18,
+    marginLeft:-150,
+    marginTop:10,
+    justifyContent: 'center'
   },
   inputTextsPersonal:{
     width:"95%",

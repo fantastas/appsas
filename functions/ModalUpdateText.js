@@ -58,17 +58,17 @@ const ModalUpdateText = (props) => {
       }}
       >
         <Text style={styles.innerSelectText}>{props.name}</Text>
-        <Text style={{ position: "absolute", bottom: 0, left: 10, color: 'grey' }}>{props.current}</Text>
+        {/* <Text style={{ position: "absolute", bottom: 1, left: 14, color: 'grey' }}>{props.current}</Text> */}
 
-        <Icon style={{ fontSize: 20, top: 5 }} name="right" />
+        <Icon style={{ fontSize: 20, top: 5, color:"#1C2F5D"}} name="right" />
       </TouchableOpacity>
       <Modal isVisible={isModalVisible}
         animationInTiming={200}
         animationIn="slideInRight"
         animationOut="slideOutRight">
-        <View style={{ flex: 1, backgroundColor: "white" }}>
+        <View style={{ flex: 1, backgroundColor: "white", borderTopLeftRadius:8, borderTopRightRadius:8 }}>
           <View style={[{ margin: 20, justifyContent: "center", flex: 1 }]}>
-            <ScrollView>
+            <ScrollView style={{marginTop:50}}>
               <View key={modalData}>
                 <Text style={{ color: "#1C2F5D", fontSize: 17, marginTop: 15, marginLeft: 0, marginBottom: 0 }}>{modalName}</Text>
                 <TextInput
@@ -89,7 +89,7 @@ const ModalUpdateText = (props) => {
             </ScrollView>
           </View>
         </View>
-        <View style={{ backgroundColor: "white" }}>
+        <View style={{ backgroundColor: "white", borderBottomLeftRadius: 8, borderBottomRightRadius: 8 }}>
           <Button style={styles.btn} onPress={() => {
             toggleModal()
             setVidinis(!vidinis)

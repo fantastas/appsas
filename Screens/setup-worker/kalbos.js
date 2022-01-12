@@ -27,7 +27,7 @@ const KalbosE = ({ navigation }) => {
     var kalbaNematoma = middle.slice(5)
     var kalbos_lygiai = t('kalbos_lygiai')
     return (
-        <View style={[styles.container, { backgroundColor: 'white' }]}>
+        <View style={[styles.container, { backgroundColor: 'white'}]}>
             <View style={[styles.row, { justifyContent: 'space-between', paddingTop: 15, paddingBottom: 30 }]}>
                 <Text style={[styles.textCM, { fontSize: 18 }]} onPress={() => { navigation.pop() }}>{t('atgal')}</Text>
                 <Text style={[styles.textCM, { fontSize: 18 }]} onPress={() => { GoToSkip() }}>{t('praleisti')}</Text>
@@ -41,17 +41,19 @@ const KalbosE = ({ navigation }) => {
                         <CheckModalList key={item} elements={item} lygiai={kalbos_lygiai} />
                     ))}
                 </View>
-                <View style={[styles.row, styles.middleContainer]}>
-
+                
+                <View style={[styles.row, styles.middleContainer, {alignItems:"center", flex: 1, alignSelf:'baseline', justifyContent:'space-between', width:'92.5%', marginLeft: 13, marginTop:5, marginBottom:2}]}>
+                <Text style={{fontSize:16}}> {kita}</Text>
                     <Checkbox
-                        key={kita}
                         key={kita}
                         position="leading"
                         label={kita}
+                        color='#1C2F5D'
+                        uncheckedColor='#1C2F5D'
                         status={checked ? 'checked' : 'unchecked'}
                         onPress={() => { setChecked(!checked) }}
                     />
-                    <Text> {kita}</Text>
+                    
                 </View>
                 <View>
                     {checked == true ? (
