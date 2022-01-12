@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "69739907645",
+    "project_id": "scobo-1b2d1",
+    "storage_bucket": "scobo-1b2d1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:69739907645:android:4427f13dfe61f72171b854",
+        "android_client_info": {
+          "package_name": "com.scobo.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "69739907645-0egvipvm31j9vnqlgl4sa2hmsungophd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDP4vnCJpceK21URX9MJhtZzirrQaTgpxA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "69739907645-0egvipvm31j9vnqlgl4sa2hmsungophd.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
